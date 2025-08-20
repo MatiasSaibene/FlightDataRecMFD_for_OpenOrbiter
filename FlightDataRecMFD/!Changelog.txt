@@ -1,0 +1,44 @@
+20-08-2025 (20 Aug 2025) Implemented C++ STL where possible. Fixed opcTimestep to opcPreStep. Compiled on Open Orbiter 2024 with CMake and Windows 11.
+
+Special thanks:
+	to polaris149Tiberius for giving me the initiative to resurrect this old MFD.
+	to gattispilot for joining the project and the development thread.
+
+
+Special thanks:
+    to C3PO for beta testing and design suggestions.
+    to Cyrus Phillips for suggesting the G meter implementation.
+
+01-25-2005  Compiled with Orbiter 2005 SDK. (050126)
+12-17-2004  Added G meter, column 11.
+12-08-2004  Changed RTT unit to km instead of meters to match documentation.
+            Fixed first line of data file containing some bogus data.
+12-05-2004  Changed AOA unit to degrees instead of radians to match documentation.
+11-26-2004  Added user definable data path <SHIFT-H>
+            Added user definable data filename <SHIFT-F>
+            Added user definable sample rate (Hz) <SHIFT-R> 
+            Added auto increment filename toggle <SHIFT-I>
+               For auto increment to work, the base filename must include "-0000"
+               (without the quotes) before the . and extension.
+               For example to use the base file name: "myflightlog" with
+               autoincrement turned on use the filename: myflightlog-0000.csv               
+               Questions?  email me.
+            Added sample rate, delimiter, and auto 
+               increment status to MFD display
+            MFD now saves data path, filename, 
+               sample rate, delimiter character,
+               auto increment status, and target
+               base to FDRMFD.cfg.  This file is
+               located in the config directory of
+               the currently running instance of
+               orbiter.
+            Removed altitude restriction.  
+               (sampling will work while landed)
+10-25-2004  Initial release for Orbiter build 031217
+
+---
+
+Matt Weidner
+matthewweidner@sbcglobal.net
+AIM: matt903745
+Yahoo Messenger: mattweidner12375

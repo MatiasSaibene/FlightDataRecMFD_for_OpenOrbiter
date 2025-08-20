@@ -1,0 +1,186 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FLIGHTDATA DIALOGEX 0, 0, 223, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Flight Data Recorder"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_VESSELLIST,63,49,156,94,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Custom1",IDC_GRAPH,"GraphWindow",WS_TABSTOP,0,98,223,6
+    LISTBOX         IDC_DATALIST,103,0,120,44,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Start",IDC_STARTSTOP,1,6,46,14
+    LTEXT           "Sample rate [Hz]",IDC_STATIC,3,31,53,8
+    COMBOBOX        IDC_RATE,57,29,39,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Reset",IDC_RESET2,51,6,46,14
+    EDITTEXT        IDC_LOGFILE,39,81,154,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,199,81,22,11
+    LTEXT           "Log File:",IDC_STATIC,3,81,32,10
+    LTEXT           "Vessel:",IDC_STATIC,24,51,35,8
+    COMBOBOX        IDC_BASELIST,63,65,156,94,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Range Target:",IDC_STATIC,2,66,57,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATA                "Sample index"
+    IDS_DATA2               "Simulator Elapsed Time"
+    IDS_DATA3               "Altitude"
+    IDS_DATA4               "Pitch"
+    IDS_DATA5               "Roll"
+    IDS_DATA6               "Yaw"
+    IDS_DATA7               "Velocity"
+    IDS_DATA8               "Acceleration"
+    IDS_DATA9               "Logitude & Latitude"
+    IDS_DATA10              "Heading"
+    IDS_DATA11              "Range-to-target"
+    IDS_DATA12              "Angle of Attack"
+    IDS_DATA13              "Mach"
+    IDS_DATA14              "Freestream temperature"
+    IDS_DATA15              "Atmospheric pressure"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATA16              "Atmospheric density"
+    IDS_DATA17              "Fuel mass"
+    IDS_DATA18              "Fuel rate"
+    IDS_DATA19              "Lift & Drag"
+    IDS_DATA20              "L/D"
+    IDS_DATA21              "Vessel Mass"
+    IDS_DATA22              "G Meter"
+    IDS_YLABEL              "Sample"
+    IDS_YLABEL2             "Time: s"
+    IDS_YLABEL3             "Alt: km"
+    IDS_YLABEL4             "Pitch: deg"
+    IDS_YLABEL5             "Roll: deg"
+    IDS_YLABEL6             "Yaw: deg"
+    IDS_YLABEL7             "Velocity: m/s"
+    IDS_YLABEL8             "Acceleration: m/s^2"
+    IDS_YLABEL9             "Lon & Lat: deg"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_YLABEL10            "Hdg: deg"
+    IDS_YLABEL11            "RTT: km"
+    IDS_YLABEL12            "AOA: deg"
+    IDS_YLABEL13            "Mach"
+    IDS_YLABEL14            "Temp: K"
+    IDS_YLABEL15            "Press: Pa"
+    IDS_YLABEL16            "Density: kg/m^3"
+    IDS_YLABEL17            "Mass: kg"
+    IDS_YLABEL18            "Rate: kg/s"
+    IDS_YLABEL19            "Lift & Drag: kN"
+    IDS_YLABEL20            "L/D"
+    IDS_YLABEL21            "Mass"
+    IDS_YLABEL22            "Acceleration: G"
+    IDS_LEGEND              "Sample"
+    IDS_LEGEND2             "Time"
+    IDS_LEGEND3             "Alt"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LEGEND4             "Pitch"
+    IDS_LEGEND5             "Roll"
+    IDS_LEGEND6             "Yaw"
+    IDS_LEGEND7             "Radial&Tangential"
+    IDS_LEGEND8             "Radial&Tangential"
+    IDS_LEGEND9             "Longitude&Latitude"
+    IDS_LEGEND10            "Heading"
+    IDS_LEGEND11            "RTT"
+    IDS_LEGEND12            "Vertical&Horizontal"
+    IDS_LEGEND13            "Mach"
+    IDS_LEGEND14            "Temp"
+    IDS_LEGEND15            "Static&Dynamic"
+    IDS_LEGEND16            "Density"
+    IDS_LEGEND17            "Mass"
+    IDS_LEGEND18            "Rate"
+    IDS_LEGEND19            "Lift&Drag"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LEGEND20            "L/D"
+    IDS_LEGEND21            "Mass"
+    IDS_LEGEND22            "G"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

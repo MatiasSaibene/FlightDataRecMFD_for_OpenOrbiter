@@ -1,0 +1,1 @@
+To compile from source, flight recorder requires MFDlib!

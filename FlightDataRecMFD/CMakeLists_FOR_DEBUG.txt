@@ -1,0 +1,65 @@
+cmake_minimum_required(VERSION 3.10)
+
+
+cmake_policy(SET CMP0081 NEW)
+
+project(FlightDataRecMFD LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+
+set(ORBITER_ROOT "C:/Users/Matias_Saibene/Desktop/OpenOrbiter2024")
+set(ORBITER_SDK_INCLUDE "${ORBITER_ROOT}/Orbitersdk/include")
+set(ORBITER_SDK_LIB_RELEASE "${ORBITER_ROOT}/Orbitersdk/lib/Orbitersdk.lib")
+set(ORBITER_SDK_LIB_DEBUG "${ORBITER_ROOT}/Orbitersdk/lib_debug")
+set(ORBITER_PLUGIN "${ORBITER_ROOT}/Modules/Plugin")
+
+file(TO_CMAKE_PATH "${ORBITER_SDK_LIB_DEBUG}" ORBITER_SDK_LIB_DEBUG)
+
+file(GLOB ORBITER_LIBS_DEBUG "${ORBITER_SDK_LIB_DEBUG}/*.lib")
+
+
+set(SOURCES
+    FlightDataRecMFD.cpp
+)
+
+
+add_library(FlightDataRecMFD SHARED ${SOURCES})
+
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+    "${ORBITER_SDK_INCLUDE}"
+)
+
+
+target_link_libraries(FlightDataRecMFD
+    PRIVATE
+        ${ORBITER_LIBS_DEBUG}
+        #${ORBITER_SDK_DIR}/lib/MFDlib.lib
+        kernel32
+        user32
+        gdi32
+        winspool
+        comdlg32
+        advapi32
+        shell32
+        ole32
+        oleaut32
+        uuid
+        odbc32
+        odbccp32
+)
+
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE
+        $<$<CONFIG:Debug>:/MDd>
+        $<$<CONFIG:Release>:/MD>
+    )
+endif()
+
+
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY_DEBUG "${ORBITER_PLUGIN}"
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${ORBITER_PLUGIN}"
+)

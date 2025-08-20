@@ -1,0 +1,40 @@
+--------------------Configuration: FlightData - Win32 Release--------------------
+Begining build with project "C:\orbiter\Orbitersdk\src\FlightDataRecCFD\FlightData.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /GX /O2 /I "..\..\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"Release/FlightData.res" /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Release/FlightData.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /pdb:none /machine:I386 /out:"..\..\..\Modules\Plugin/FlightDataRecCFD.dll" /implib:"Release/FlightDataRecCFD.lib" /libpath:"..\..\lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /fo"Release/FlightData.res" /d "NDEBUG" "C:\orbiter\Orbitersdk\src\FlightDataRecCFD\FlightData.rc"" 
+Creating temp file "C:\DOCUME~1\matt\LOCALS~1\Temp\RSPC1.tmp" with contents </nologo /MD /W3 /GX /O2 /I "..\..\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\orbiter\Orbitersdk\src\FlightDataRecCFD\FDGraph.cpp"
+"C:\orbiter\Orbitersdk\src\FlightDataRecCFD\FlightData.cpp"
+"C:\orbiter\Orbitersdk\src\FlightDataRecCFD\Graph.cpp"
+>
+Creating command line "cl.exe @C:\DOCUME~1\matt\LOCALS~1\Temp\RSPC1.tmp" 
+Creating temp file "C:\DOCUME~1\matt\LOCALS~1\Temp\RSPC2.tmp" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /pdb:none /machine:I386 /out:"..\..\..\Modules\Plugin/FlightDataRecCFD.dll" /implib:"Release/FlightDataRecCFD.lib" /libpath:"..\..\lib" 
+.\Release\FDGraph.obj
+.\Release\FlightData.obj
+.\Release\Graph.obj
+.\Release\FlightData.res
+..\..\lib\orbiter.lib
+..\..\lib\Orbitersdk.lib>
+Creating command line "link.exe @C:\DOCUME~1\matt\LOCALS~1\Temp\RSPC2.tmp" 
+Compiling resources...
+Compiling...
+FDGraph.cpp
+FlightData.cpp
+Graph.cpp
+Generating Code...
+Linking...
+   Creating library Release/FlightDataRecCFD.lib and object Release/FlightDataRecCFD.exp
+
+
+
+FlightDataRecCFD.dll - 0 error(s), 0 warning(s)
