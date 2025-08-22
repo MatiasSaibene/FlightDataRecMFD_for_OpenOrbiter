@@ -30,10 +30,9 @@ target_compile_definitions(FlightDataRecMFD
 
 target_link_libraries(FlightDataRecMFD
     PRIVATE
-        MFDlib
         ${ORBITER_SDK_DIR}/lib/Orbiter.lib
         ${ORBITER_SDK_DIR}/lib/Orbitersdk.lib
-        #${ORBITER_SDK_DIR}/lib/MFDlib.lib
+        ${ORBITER_SDK_DIR}/lib/MFDlib.lib
         kernel32
         user32
         gdi32

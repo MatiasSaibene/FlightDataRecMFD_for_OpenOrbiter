@@ -208,8 +208,8 @@ DLLCLBK void opcDLLExit (HINSTANCE hDLL)
 
 void log_data(void);
 
-DLLCLBK void opcPreStep (double simt, double simdt, double mjd)
-{
+DLLCLBK void opcPreStep (double simt, double simdt, double mjd){
+	
   if (!paused) {
 	if (simt >= g_Data.tnext) {
 		VESSEL *v = oapiGetFocusInterface();
@@ -709,7 +709,7 @@ void log_data(void){
 
 	std::ofstream out_file;
 	
-	out_file.open(logpath);
+	out_file.open(logpath, std::ios::app);
 
 	if (out_file.is_open()){
 
